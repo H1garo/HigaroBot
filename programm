@@ -1,2 +1,9 @@
 import telebot
 bot = telebot.TeleBot('6649073588:AAGYyWmwoBmUpA6-yKlDoqgzNtaVCUv32uQ')
+from telebot import types
+@Higarohoooomeeee_bot(commands = ['start'])
+def url(message):
+    markup = types.InlineKeyboardMarkup()
+    btn1 = types.InlineKeyboardButton(text='Чат', url='https://t.me/higarohomeorig')
+    markup.add(btn1)
+    bot.send_message(message.from_user.id, "Бот принадлежит владельцу чата", reply_markup = markup)
